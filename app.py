@@ -49,7 +49,7 @@ def load_from_layout(path_or_url):
 
     gf.columns = ["Team", "GF/G", "PP%", "PK%"]
     ga.columns = ["Team", "GP", "GA/G"]
-    gl.columns = ["Goalie", "Team", "GAA", "SV%"]
+    gl.columns = ["Name", "Team", "GA/A", "SV%"]
 
     # clean numbers
     for c in ["GF/G", "PP%", "PK%"]:
@@ -70,7 +70,7 @@ def load_from_layout(path_or_url):
         "PK%":    teams["PK%"],
     }).dropna(subset=["Team"]).reset_index(drop=True)
 
-    GOALIES = gl[["Team", "Goalie", "SV%", "GAA"]].copy()
+    GOALIES = gl[["Team", "Name", "SV%", "GAA"]].copy()
     GOALIES["Team"] = GOALIES["Team"].astype(str)
     GOALIES["Goalie"] = GOALIES["Goalie"].astype(str)
     GOALIES = GOALIES.dropna(subset=["Team","Goalie"]).reset_index(drop=True)
