@@ -9,10 +9,10 @@ st.set_page_config(page_title="NHL Score Model", page_icon="🏒", layout="cente
 # CONFIG: where to load your Excel
 # =========================
 # Option A: keep the Excel in your repo at this path:
-EXCEL_PATH = "data/nhl_stats.xlsx"       # GF/GA/Goalie sheets (see layout below)
+EXCEL_PATH = "data/NHL_stats.xlsx"       # GF/GA/Goalie sheets (see layout below)
 
 # Option B: OR host the Excel and paste a raw URL here (leave None to skip)
-EXCEL_URL = None  # e.g. "https://raw.githubusercontent.com/lgdsbrand/nhl-model/main/data/nhl_stats.xlsx"
+EXCEL_URL = None  # e.g. "https://raw.githubusercontent.com/lgdsbrand/nhl-model/main/data/NHL_stats.xlsx"
 
 # Optional: a batch games file in repo or URL (Away Team, Home Team, [Book Total])
 GAMES_PATH = None
